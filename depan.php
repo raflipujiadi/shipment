@@ -1,12 +1,27 @@
+<?php
+	$menu 			= isset($_GET['menu']) ? $_GET['menu'] : '';
+?>
 <div class="bg-success">
 	    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom">
         <div class="container"><a class="navbar-brand" href="#" onClick="pg1">CARGO</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navbarResponsive"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#layanan">LAYANAN</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#pengiriman">PENGIRIMAN</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#testimonial">TESTIMONIAL</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link <?php
+                                            if ($menu == "payments")
+                                                echo "is-active";
+                                            ?>" href="?menu=layanan">LAYANAN</a></li>
+                    <li class="nav-item"><a class="nav-link <?php
+                                            if ($menu == "payments")
+                                                echo "is-active";
+                                            ?>" href="?menu=pengiriman">PENGIRIMAN</a></li>
+                    <li class="nav-item"><a class="nav-link <?php
+                                            if ($menu == "payments")
+                                                echo "is-active";
+                                            ?>" href="?menu=testimonial">TESTIMONIAL</a></li>
+                    <li class="nav-item"><a class="nav-link <?php
+                                            if ($menu == "payments")
+                                                echo "is-active";
+                                            ?>" href="?menu=about">ABOUT</a></li>
 					<form class="form-inline my-2 my-lg-0">
 					  <input class="form-control mr-sm-2" type="search" placeholder="Input your track number" aria-label="Search">
 					  <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Track now</button>
@@ -17,9 +32,10 @@
     </nav>
     <header class="masthead text-center text-white">
         <div class="masthead-content">
-            <div class="h-25 d-flex align-self-center container">
-				<div class="h-25 p-5 bg-success"><div class="p-3 float-left"><img class="rounded-circle img-fluid" src="images/Web 1920 - 1-image.png"><img class="rounded-circle img-fluid" src="images/Web 1920 - 1-image.png"></div></div>
-				<div class=" h-25 p-5 bg-success"><div class="p-3"><img class="rectangle-circle img-fluid" src="images/Picture1.png"></div></div>
+            <div class="h-75 p-5 d-flex align-self-center container">
+				<div class="h-50"><div class="p-5 float-left"><img class="rounded-circle img-fluid" src="images/Web 1920 - 1-image.png"><img class="rounded-circle img-fluid" src="images/Web 1920 - 1-image.png"></div></div>
+				<div class="p-5"><img class="rectangle-circle img-fluid" src="images/Picture7.png"></div>
+				<div class="p-5"><img class="rectangle-circle img-fluid" src="images/Picture1.png"></div>
 			</div>
 			<h1 class="masthead-heading mb-0">CARGO.XYZ</h1>
 			<h2 class="masthead-subheading mb-0">Spesialis pengiriman barang</h2>
@@ -30,7 +46,7 @@
         <div class="bg-circle-4 bg-circle"></div>
     </header>
 	<!-- Setelah klik menu tampil kan bagian ini -->
-	<div class="container" id="layanan">
+	<div class="container wrap" id="layanan">
     <section>
 		<center><h1>LAYANAN<h1></center>
 			<div class="row align-items-center">
@@ -190,12 +206,12 @@
                 </div>
                 <div class="col-lg-6 order-lg-2">
                     <div class="p-5">
-                        <h6>Alamat</h6> 
-                        <h2>Kelapa Gading</h2>
-						<h6>Alamat surel</h6>
-                        <h2>halo@situssangathebat.co.id</h2>
-						<h6>Nomor Telepon</h6>
-                        <h2>(0361)  4567890</h2>
+                        <h6 class="display-6">Alamat</h6> 
+                        <h2 class="display-6">Kelapa Gading</h2>
+						<h6 class="display-6">Alamat surel</h6>
+                        <h2 class="display-6">halo@situssangathebat.co.id</h2>
+						<h6 class="display-6">Nomor Telepon</h6>
+                        <h2 class="display-6">(0361)  4567890</h2>
                     </div>
                 </div>
             </div>
