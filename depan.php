@@ -7,21 +7,21 @@ $menu             = isset($_GET['menu']) ? $_GET['menu'] : '';
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link <?php
-                                                            if ($menu == "payments")
-                                                                echo "is-active";
-                                                            ?>" href="?menu=layanan">LAYANAN</a></li>
+                                                            if ($menu == "layanan")
+                                                                echo "active";
+                                                            ?>" href="?menu=layanan#layanan">LAYANAN</a></li>
                     <li class="nav-item"><a class="nav-link <?php
-                                                            if ($menu == "payments")
-                                                                echo "is-active";
-                                                            ?>" href="?menu=pengiriman">PENGIRIMAN</a></li>
+                                                            if ($menu == "pengiriman")
+                                                                echo "active";
+                                                            ?>" href="?menu=pengiriman#pengiriman">PENGIRIMAN</a></li>
                     <li class="nav-item"><a class="nav-link <?php
-                                                            if ($menu == "payments")
-                                                                echo "is-active";
-                                                            ?>" href="?menu=testimonial">TESTIMONIAL</a></li>
+                                                            if ($menu == "testimonial")
+                                                                echo "active";
+                                                            ?>" href="?menu=testimonial#testimonial">TESTIMONIAL</a></li>
                     <li class="nav-item"><a class="nav-link <?php
-                                                            if ($menu == "payments")
-                                                                echo "is-active";
-                                                            ?>" href="?menu=about">ABOUT</a></li>
+                                                            if ($menu == "about")
+                                                                echo "active";
+                                                            ?>" href="?menu=about#about">ABOUT</a></li>
                     <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Input your track number" aria-label="Search">
                         <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Track now</button>
@@ -52,6 +52,7 @@ $menu             = isset($_GET['menu']) ? $_GET['menu'] : '';
         <div class="bg-circle-4 bg-circle"></div>
     </header>
     <!-- Setelah klik menu tampil kan bagian ini -->
+    <div id="content"></div>
     <div class="container wrap" id="layanan">
         <section>
             <center>

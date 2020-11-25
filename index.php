@@ -11,32 +11,38 @@ $ambil_data = mysqli_query($koneksi, $query);
 	<?php
 	include 'view/master.php';
 	?>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			function loadData_layanan() {
+				$.ajax({ //create an ajax request to display.php
+					method: "post",
+					url: "http://localhost/shipment/model/pg_pelayanan.php",
+					success: function(data) {
+						$("#content").html(data);
+					}
+				});
+			};
+		})
+	</script>
 </head>
 
 <body>
 	<?php
-  if (isset($hal)) {
-    //jika $hal ada isinya
-    include $hal . ".php";
-  } else {
-    include "depan.php";
-  }
-  ?>
+	if (isset($hal)) {
+		//jika $hal ada isinya
+		include $hal . ".php";
+	} else {
+		include "depan.php";
+	}
+	?>
 </body>
 
-	<!-- Footer -->
-	<footer id="about">
-		
-	</footer>
+<!-- Footer -->
+<footer id="about">
 
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$("#home-content").load("model/ambildatalayanan.php");
-			$("#home-content").load("model/pg_pelayanan.php");
-			$("#container").load("model/pg_testimonial.php");
-			$("#container").load("model/pg_about.php");
-			$("#container").load("model/home.php");
-		});
-	</script>
-	<script src="assets/js/jquery.min.js"></script>
+</footer>
+
+
+<script src="assets/js/jquery.min.js"></script>
+
 </html>
